@@ -106,6 +106,26 @@ public class Logic_1 {
         else return 0;
 
     }
+    public int blueTicket(int a, int b, int c) {
+        int ab=a+b,bc=b+c,ac=a+c;
+        if(ab==10||bc==10||ac==10)
+            return 10;
+        else if((ab-10)==bc||(ab-10)==ac)
+            return 5;
+        else return 0;
+    }
+    public boolean shareDigit(int a, int b) {
+        int da=a/10,db=b/10,ma=a%10,mb=b%10;
+        return da==db||ma==mb||da==mb||ma==db;
+    }
+    public int sumLimit(int a, int b) {
+        String s=String.valueOf(a+b);
+        String as=String.valueOf(a);
+        if(s.length()==as.length())return a+b;
+
+        return a;
+    }
+
 
 
 
