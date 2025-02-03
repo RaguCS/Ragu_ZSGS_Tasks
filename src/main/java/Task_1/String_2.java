@@ -110,5 +110,12 @@ public class String_2 {
             s+=word;
         return s;
     }
+    public boolean prefixAgain(String str, int n) {
+        String s=str.substring(0,n);
+        for(int i=n;i<str.length();i++){
+            if(str.substring(i).startsWith(s))return true;
+        }
+        return false;
+    }
 
 }
