@@ -117,5 +117,18 @@ public class String_2 {
         }
         return false;
     }
+    public boolean xyzMiddle(String str) {
+        String xyz = "xyz";
+        int len = str.length();
+        int mid = len / 2;
+
+        if (len < 3)return false;
+        if (len % 2 != 0)
+            return xyz.equals(str.substring(mid-1,mid+2));
+        else if (xyz.equals(str.substring(mid-1,mid+2)) || xyz.equals(str.substring(mid-2,mid+1)))
+            return true;
+        else
+            return false;
+    }
 
 }
