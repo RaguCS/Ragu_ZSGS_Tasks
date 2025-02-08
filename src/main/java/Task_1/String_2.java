@@ -130,5 +130,64 @@ public class String_2 {
         else
             return false;
     }
+    public String getSandwich(String str) {
+        int f = -1;
+        int l = -1;
+        for(int i=0; i < str.length()-4; i++) {
+            if(str.startsWith("bread", i)) {
+                if(f==-1) {
+                    f=i;
+                }
+                l=i;
+            }
+        }
+        if( f == l) {
+            return "";
+        }
+        return str.substring(f+5,l);
+    }
 
+    public boolean sameStarChar(String str) {
+        int z = -1;
+        for(int i=1; i < str.length()-1; i++)
+        {
+            if(str.charAt(i) == '*') {
+                if(str.charAt(i-1) == str.charAt(i+1)){
+                    z=i;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public String oneTwo(String str) {
+        StringBuilder result = new StringBuilder();
+        for(int i=0; i <str.length()-2; i += 3)
+        {
+            result.append(str.substring(i + 1, i + 3)).append(str.charAt(i));
+        }
+        return result.toString();
+    }
+
+    public String zipZap(String str) {
+        StringBuilder result = new StringBuilder();
+        if(str.length() <3) return str;
+        for(int i=0; i<str.length(); i++ ) {
+            if(str.charAt(i) == 'z' && str.charAt(i+2) == 'p') {
+                result.append("zp");
+                i += 2;
+            }
+            else {
+                result.append(str.charAt(i));
+            }
+        }
+        return result.toString();
+    }
+    public String starOut(String str) {
+        String pattern = "([a-zA-Z0-9]{0,1})\\*+([a-zA-Z0-9]{0,1})";
+        str = str.replaceAll(pattern, "");
+        return str;
+    }
 }
