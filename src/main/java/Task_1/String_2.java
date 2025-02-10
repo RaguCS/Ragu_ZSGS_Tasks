@@ -190,4 +190,53 @@ public class String_2 {
         str = str.replaceAll(pattern, "");
         return str;
     }
+    public String plusOut(String str, String word) {
+        String result = "";
+        int i=0;
+        int end = 0;
+        int l =str.length();
+        while(i < str.length()) {
+            end = i + word.length();
+            if( end > l) {
+                end=l;
+            }
+            if(str.substring(i,end).equals(word)) {
+                result = result + word;
+                i = i + word.length();
+            }
+            else {
+                result = result + "+";
+                i++;
+            }
+        }
+        return result;
+    }
+    public String wordEnds(String str, String word) {
+        String result = "";
+        int i=0;
+        int end = 0;
+        int l =str.length();
+        while( i < str.length()) {
+
+            end = i + word.length();
+            if( end > l) {
+                end=l;
+            }
+
+            if(str.substring(i,end).equals(word)) {
+
+                if(i>0) {
+                    result = result + str.charAt(i-1);
+                }
+
+                if(i+word.length() <l) {
+                    result = result + str.charAt(end);
+                }
+
+            }
+            i++;
+        }
+        return result;
+    }
+
 }
