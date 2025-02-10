@@ -5,7 +5,7 @@ import java.util.Map;
 public class Day_1 {
     public static void main(String[] args) {
         Day_1 d1=new Day_1();
-        System.out.println(d1.findMedianSortedArrays(new int[]{}));
+//        System.out.println(d1.findMedianSortedArrays());
     }
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n1=nums1.length;
