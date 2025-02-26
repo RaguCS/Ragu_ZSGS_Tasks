@@ -1,7 +1,15 @@
 package Assignments;
 
 import java.util.Scanner;
+class A{
 
+}
+class B{
+
+}
+class C{
+
+}
 public class DataTypes {
     public void conversions(){
         // 1. float to int (explicit narrowing conversion)
