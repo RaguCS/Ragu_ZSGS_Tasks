@@ -1,8 +1,31 @@
 package com.ragu;
 
 public class Main {
-    public static void main(String[] args) {
+    static String clean(String identifier) {
+        identifier=identifier.replaceAll(" ","_");
+        identifier=identifier.replaceAll("4","a");
+        identifier=identifier.replaceAll("3","e");
+        identifier=identifier.replaceAll("0","o");
+        identifier=identifier.replaceAll("1","l");
+        identifier=identifier.replaceAll("7","t");
+        identifier=identifier.replaceAll("[^a-z A-Z _-] ","");
+        StringBuilder sb=new StringBuilder(identifier);
+        for(int i=0;i<sb.length();i++){
+            if(sb.charAt(i)=='-'&&i<sb.length()-1&&sb.charAt(i+1)!='_'){
+                String s=""+sb.charAt(i+1);
+                s=s.toUpperCase();
+                sb.setCharAt(i+1,s.charAt(0));
+                sb.deleteCharAt(i);
 
+            }
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        String s="a-bc!¡.";
+
+        System.out.println(s.replaceAll("[^a-z A-Z_-]",""));
+//        System.out.println(clean(s));
 //        Scanner sc=new Scanner(System.in);
 //        int t=sc.nextInt();
 //        while(t-->0){
