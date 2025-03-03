@@ -208,6 +208,68 @@ public class Arrays_ {
             left++;
         }
     }
+    public void jaggedArray(){
+        Scanner scanner = new Scanner(System.in);
+
+        // Get number of persons
+        System.out.print("Enter the number of persons (N): ");
+        int n = scanner.nextInt();
+
+        // Initialize a jagged array
+        int[][] weights = new int[n][];
+
+        // Get weights for each person
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter number of weights for person " + (i + 1) + ": ");
+            int numWeights = scanner.nextInt();
+            weights[i] = new int[numWeights];
+
+            System.out.println("Enter " + numWeights + " weights:");
+            for (int j = 0; j < numWeights; j++) {
+                weights[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Functionality to add a weight for any user at any time
+        System.out.print("Enter the person index (0-based) to add a weight: ");
+        int personIndex = scanner.nextInt();
+
+        if (personIndex >= 0 && personIndex < n) {
+            System.out.print("Enter the new weight: ");
+            int newWeight = scanner.nextInt();
+            weights[personIndex] = addWeight(weights[personIndex], newWeight);
+        }
+
+        // Functionality to get minimum weight of a person
+        System.out.print("Enter the person index (0-based) to find minimum weight: ");
+        int minPersonIndex = scanner.nextInt();
+
+        if (minPersonIndex >= 0 && minPersonIndex < n) {
+            System.out.println("Minimum weight of person " + (minPersonIndex + 1) + ": " + findMinWeight(weights[minPersonIndex]));
+        }
+
+        scanner.close();
+    }
+
+    public static int[] addWeight(int[] weights, int newWeight) {
+        int[] newWeights = new int[weights.length + 1];
+        System.arraycopy(weights, 0, newWeights, 0, weights.length);
+        newWeights[weights.length] = newWeight;
+        return newWeights;
+    }
+
+    public static int findMinWeight(int[] weights) {
+        if (weights.length == 0) {
+            return Integer.MAX_VALUE; // No weights available
+        }
+        int min = weights[0];
+        for (int weight : weights) {
+            if (weight < min) {
+                min = weight;
+            }
+        }
+        return min;
+    }
 
 
 }
