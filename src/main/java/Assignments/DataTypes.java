@@ -11,6 +11,9 @@ class C{
 
 }
 public class DataTypes {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
     public void conversions(){
         // 1. float to int (explicit narrowing conversion)
         float floatVal = 10.75f;
