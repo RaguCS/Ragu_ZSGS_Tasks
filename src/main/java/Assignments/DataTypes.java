@@ -65,9 +65,9 @@ public class DataTypes {
         System.out.println("Before swapping: a = " + a + ", b = " + b);
 
         // Swap without temp variable using addition and subtraction
-        a = a + b; // a = 10 + 20 = 30
-        b = a - b; // b = 30 - 20 = 10
-        a = a - b; // a = 30 - 10 = 20
+        a = a + b;
+        b = a - b;
+        a = a - b;
 
         System.out.println("After swapping: a = " + a + ", b = " + b);
 

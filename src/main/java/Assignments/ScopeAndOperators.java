@@ -87,7 +87,7 @@ public class ScopeAndOperators {
         scanner.close();
     }
     public void variableScope(){
-        int outsideIfVariable = 10; // Variable declared outside the if block (accessible everywhere in main)
+        int outsideIfVariable = 10; // Variable declared outside the if block (accessible everywhere in method)
 
         if (outsideIfVariable > 5) {
             int insideIfVariable = 20; // Variable declared inside the if block (accessible only within this block)
