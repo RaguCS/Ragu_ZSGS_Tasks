@@ -1,8 +1,6 @@
 package com.ragu;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -100,7 +98,6 @@ public static void main(String[] args) {
         String[] arr={"aba","bcb","ece","aa","e"};
         int[][] queries={{0,2},{1,4},{1,1}};
         System.out.println(Arrays.toString(main.vowelStrings(arr,queries)));
-
     }
     public List<String> generateParentheses(int n){
     List<String> list=new ArrayList<>();
