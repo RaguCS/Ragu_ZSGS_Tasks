@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Java Quiz</title>
+    <link rel="stylesheet" href="Smoothcss.css">
+</head>
+<body>
+
+<!-- Navigation Buttons -->
+<div id="navigation">
+    <h2>Jump to Question</h2>
+    <div class="nav-buttons">
+        <button onclick="scrollToSection('section1')">Q1</button>
+        <button onclick="scrollToSection('section2')">Q2</button>
+        <button onclick="scrollToSection('section3')">Q3</button>
+        <button onclick="scrollToSection('section4')">Q4</button>
+        <button onclick="scrollToSection('section5')">Q5</button>
+        <button onclick="scrollToSection('section6')">Q6</button>
+        <button onclick="scrollToSection('section7')">Q7</button>
+        <button onclick="scrollToSection('section8')">Q8</button>
+        <button onclick="scrollToSection('section9')">Q9</button>
+        <button onclick="scrollToSection('section10')">Q10</button>
+        <button onclick="scrollToSection('section11')">Q11</button>
+        <button onclick="scrollToSection('section12')">Q12</button>
+        <button onclick="scrollToSection('section13')">Q13</button>
+        <button onclick="scrollToSection('section14')">Q14</button>
+        <button onclick="scrollToSection('section15')">Q15</button>
+        <button onclick="scrollToSection('section16')">Q16</button>
+        <button onclick="scrollToSection('section17')">Q17</button>
+        <button onclick="scrollToSection('section18')">Q18</button>
+        <button onclick="scrollToSection('section19')">Q19</button>
+        <button onclick="scrollToSection('section20')">Q20</button>
+    </div>
+</div>
+
+<!-- Quiz Questions -->
+<div class="quiz-container">
+    <div class="question-card" id="section1">
+        <h3>Q1. What is Java?</h3>
+        <div class="options">
+            <input type="radio" name="q1"> Definition
+            <input type="radio" name="q1"> Features
+            <input type="radio" name="q1"> Uses
+            <input type="radio" name="q1"> Platform
+        </div>
+    </div>
+
+    <div class="question-card" id="section2">
+        <h3>Q2. What is the size of an int in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q2"> 2 bytes
+            <input type="radio" name="q2"> 4 bytes
+            <input type="radio" name="q2"> 8 bytes
+            <input type="radio" name="q2"> 16 bytes
+        </div>
+    </div>
+
+    <div class="question-card" id="section3">
+        <h3>Q3. What is JVM in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q3"> A library
+            <input type="radio" name="q3"> A compiler
+            <input type="radio" name="q3"> A runtime environment
+            <input type="radio" name="q3"> A program
+        </div>
+    </div>
+
+    <div class="question-card" id="section4">
+        <h3>Q4. Which of the following is not a Java datatype?</h3>
+        <div class="options">
+            <input type="radio" name="q4"> String
+            <input type="radio" name="q4"> Character
+            <input type="radio" name="q4"> Boolean
+            <input type="radio" name="q4"> CharArray
+        </div>
+    </div>
+
+    <div class="question-card" id="section5">
+        <h3>Q5. What is the default value of a local variable in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q5"> 0
+            <input type="radio" name="q5"> null
+            <input type="radio" name="q5"> Undefined
+            <input type="radio" name="q5"> It must be initialized
+        </div>
+    </div>
+
+    <div class="question-card" id="section6">
+        <h3>Q6. What does JDK stand for?</h3>
+        <div class="options">
+            <input type="radio" name="q6"> Java Development Kit
+            <input type="radio" name="q6"> Java Deployment Kit
+            <input type="radio" name="q6"> Java Dependency Kit
+            <input type="radio" name="q6"> Java Design Kit
+        </div>
+    </div>
+
+    <div class="question-card" id="section7">
+        <h3>Q7. Which keyword is used to inherit a class in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q7"> inherit
+            <input type="radio" name="q7"> extends
+            <input type="radio" name="q7"> implements
+            <input type="radio" name="q7"> super
+        </div>
+    </div>
+
+    <div class="question-card" id="section8">
+        <h3>Q8. What is the range of the byte datatype in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q8"> -128 to 127
+            <input type="radio" name="q8"> -256 to 255
+            <input type="radio" name="q8"> 0 to 255
+            <input type="radio" name="q8"> -512 to 511
+        </div>
+    </div>
+
+    <div class="question-card" id="section9">
+        <h3>Q9. Which operator is used for concatenation in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q9"> +
+            <input type="radio" name="q9"> &
+            <input type="radio" name="q9"> *
+            <input type="radio" name="q9"> /
+        </div>
+    </div>
+
+    <div class="question-card" id="section10">
+        <h3>Q10. Which of these access specifiers means accessible only within the same package?</h3>
+        <div class="options">
+            <input type="radio" name="q10"> public
+            <input type="radio" name="q10"> private
+            <input type="radio" name="q10"> protected
+            <input type="radio" name="q10"> default
+        </div>
+    </div>
+
+    <div class="question-card" id="section11">
+        <h3>Q11. What is method overloading in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q11"> Methods with the same name but different parameter lists
+            <input type="radio" name="q11"> Methods with the same name in multiple classes
+            <input type="radio" name="q11"> Methods that call other methods
+            <input type="radio" name="q11"> Methods with the same name and parameters in different packages
+        </div>
+    </div>
+
+    <div class="question-card" id="section12">
+        <h3>Q12. What is the superclass of all classes in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q12"> Object
+            <input type="radio" name="q12"> Class
+            <input type="radio" name="q12"> String
+            <input type="radio" name="q12"> Main
+        </div>
+    </div>
+
+    <div class="question-card" id="section13">
+        <h3>Q13. What are wrapper classes in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q13"> Classes that encapsulate primitive data types
+            <input type="radio" name="q13"> Classes that wrap strings
+            <input type="radio" name="q13"> Classes that inherit another class
+            <input type="radio" name="q13"> None of the above
+        </div>
+    </div>
+
+    <div class="question-card" id="section14">
+        <h3>Q14. Which method is used to start a thread in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q14"> begin()
+            <input type="radio" name="q14"> start()
+            <input type="radio" name="q14"> run()
+            <input type="radio" name="q14"> launch()
+        </div>
+    </div>
+
+    <div class="question-card" id="section15">
+        <h3>Q15. What is the default access specifier in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q15"> public
+            <input type="radio" name="q15"> private
+            <input type="radio" name="q15"> default
+            <input type="radio" name="q15"> protected
+        </div>
+    </div>
+
+    <div class="question-card" id="section16">
+        <h3>Q16. What is the use of "this" keyword in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q16"> It is used to refer to the current object
+            <input type="radio" name="q16"> It is used to call the parent class
+            <input type="radio" name="q16"> It is used for threading
+            <input type="radio" name="q16"> It is used for exception handling
+        </div>
+    </div>
+
+    <div class="question-card" id="section17">
+        <h3>Q17. How do you terminate a loop in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q17"> exit
+            <input type="radio" name="q17"> terminate
+            <input type="radio" name="q17"> break
+            <input type="radio" name="q17"> stop
+        </div>
+    </div>
+
+    <div class="question-card" id="section18">
+        <h3>Q18. What is the purpose of the "final" keyword in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q18"> To define constants
+            <input type="radio" name="q18"> To declare a method that cannot be overridden
+            <input type="radio" name="q18"> To declare a class that cannot be inherited
+            <input type="radio" name="q18"> All of the above
+        </div>
+    </div>
+
+    <div class="question-card" id="section19">
+        <h3>Q19. Which of these can be overlapped in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q19"> Fields
+            <input type="radio" name="q19"> Methods
+            <input type="radio" name="q19"> Variables
+            <input type="radio" name="q19"> Packages
+        </div>
+    </div>
+
+    <div class="question-card" id="section20">
+        <h3>Q20. How is memory for objects allocated in Java?</h3>
+        <div class="options">
+            <input type="radio" name="q20"> On the stack
+            <input type="radio" name="q20"> On the heap
+            <input type="radio" name="q20"> Both stack and heap
+            <input type="radio" name="q20"> None
+        </div>
+    </div>
+
+    <!-- More questions go here -->
+
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" onclick="scrollToTop()">↑ Top</button>
+
+<script src="SmoothJs.js"></script>
+</body>
+</html>

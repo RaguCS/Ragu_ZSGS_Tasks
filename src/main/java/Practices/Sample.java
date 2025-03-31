@@ -4,13 +4,19 @@ import java.util.Arrays;
 
 public class Sample {
     String s;
+    public void print(String s){
+        System.out.println();
+    }public static void print(String...s){
+        System.out.println("se");
+    }
 
     public static void main(String[] args) {
         Sample sample = new Sample();
-        String a1="IIIDIDDD";
-        System.out.println(a1);
-        System.out.println(sample.smallestNumber(a1));
-        System.out.println(123549876);
+        sample.print(new String[]{"a","b"});
+//        String a1="IIIDIDDD";
+//        System.out.println(a1);
+//        System.out.println(sample.smallestNumber(a1));
+//        System.out.println(123549876);
     }
     public String smallestNumber(String pattern) {
         int[] arr=new int[pattern.length()];

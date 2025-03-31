@@ -1,6 +1,7 @@
 package com.ragu;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -109,6 +110,28 @@ public int findMin(int[] nums) {
                 recursive( path + str.substring(index, index + length) + ".", index + length,dots + 1, str, ans);
             }
         }
+    }
+    public List<List<String>> groupAnagrams(String[] strs) {
+        int n=strs.length;
+        List<List<String>> res=new ArrayList<>();
+        int[] used=new int[n];
+        for(int i=0;i<n;i++){
+            if(used[i]==1)continue;
+            used[i]=1;
+            HashSet<Character> hash=strs[i].chars().mapToObj(c->(char)c).collect(Collectors.toCollection(HashSet::new));
+            List<String> ans=new ArrayList<>();
+            ans.add(strs[i]);
+            for(int j=0;j<n;j++){
+                if(used[j]==1)continue;
+                if(hash.equals(strs[j].chars().mapToObj(c->(char)c).collect(Collectors.toCollection(HashSet::new)))){
+                    ans.add(strs[j]);
+                    used[j]=1;
+                }
+            }
+            res.add(ans);
+
+        }
+    return res;
     }
 
 
