@@ -3,8 +3,8 @@ package Assignments.inheritance;
 public class StudentMain {
     public static void main(String[] args) {
         ZSGSStudent student = new ZSGSStudent();
-        LStudent student1 = new ZSGSStudent("ragu",23,"chennai",2024,"B.E");
-        LStudent student2 = new ZSGSStudent();
+        Student student1 = new ZSGSStudent("ragu",23,"chennai",2024,"B.E");
+        Student student2 = new ZSGSStudent();
     }
 }
 class Student{
@@ -22,7 +22,7 @@ class Student{
     }
 
 }
-class ZSGSStudent extends LStudent {
+class ZSGSStudent extends Student {
     int batch;
     String qualification;
     public ZSGSStudent(){

@@ -136,10 +136,39 @@ public int findMin(int[] nums) {
 
 
 public static void main(String[] args) {
-    String s="25525511135";
-//    System.out.println(s.compareTo());
-    System.out.println(new Main().restoreIpAddresses(s));
+    int[][] mat={{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+    new Main().setZeroes(mat);
+    System.out.println(Arrays.deepToString(mat));
 
+    }
+    public void setZeroes(int[][] matrix) {
+        ArrayList<int[]> list=new ArrayList<>();
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i][j]==0){
+                    list.add(new int[]{i,j});
+                    matrix[i][j]=1;
+                }
+            }
+        }
+        for(int[] indexes: list){
+            int row=indexes[0];
+            int col=indexes[1];
+            matrix[row][col]=1;
+            recursion(row,col,matrix,1,0);
+            matrix[row][col]=1;
+            recursion(row,col,matrix,-1,0);
+            matrix[row][col]=1;
+            recursion(row,col,matrix,0,1);
+            matrix[row][col]=1;
+            recursion(row,col,matrix,0,-1);
+        }
+    }
+    public void recursion(int row,int col,int[][] mat,int rowInc,int colInc) {
+        if (row < 0 || col < 0 || row >= mat.length || col >= mat[0].length || mat[row][col] == 0)
+            return;
+        mat[row][col] = 0;
+        recursion(row + rowInc, col + colInc, mat, rowInc, colInc);
     }
     public List<String> generateParentheses(int n){
     List<String> list=new ArrayList<>();
